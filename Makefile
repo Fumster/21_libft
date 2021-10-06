@@ -1,13 +1,13 @@
-sources =		ft_isalpha.c ft_isdigit.c ft_isalnum.c
+sources =		ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
 
 objects	=		$(sources:.c=.o)
 
 flags =			-Wall -Wextra -Werror
 
-run : 			$(objects) isalnum_main.o
+run : 			$(objects) main.o
 				gcc $(flags) -o run $^
 
-all	:			libft.a
+all	:			libft.a run
 
 libft.a	:		$(objects)
 				ar r libft.a $^
@@ -15,11 +15,11 @@ libft.a	:		$(objects)
 $(objects) :	$(sources) libft.h
 				gcc $(flags) -c $(sources)
 
-isalnum_main.o :	isalnum_main.c libft.h
+main.o :	main.c libft.h
 					gcc $(flags) -c $<
 
 clean :
-				rm -rf $(objects) isalnum_main.o
+				rm -rf $(objects) main.o
 
 fclean :		clean
 				rm -rf run libft.a
