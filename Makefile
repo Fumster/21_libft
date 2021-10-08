@@ -1,13 +1,14 @@
-sources =		ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
+sources =		ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c
 
 objects	=		$(sources:.c=.o)
 
 flags =			-Wall -Wextra -Werror
 
+all	:			libft.a
+
 run : 			$(objects) main.o
 				gcc $(flags) -o run $^
 
-all	:			libft.a run
 
 libft.a	:		$(objects)
 				ar r libft.a $^
