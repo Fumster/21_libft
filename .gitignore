@@ -5,4 +5,5 @@
 **/trash/**
 **.o
 **.a
+**.DS_store
 
