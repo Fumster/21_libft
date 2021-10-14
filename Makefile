@@ -7,7 +7,7 @@ flags =			-Wall -Wextra -Werror
 all	:			libft.a
 
 run : 			$(objects) main.o
-				gcc $(flags) -o run $^
+				gcc $(flags) -o run $^ `pkg-config --libs libbsd`
 
 
 libft.a	:		$(objects)
