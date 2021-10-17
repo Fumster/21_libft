@@ -5,10 +5,10 @@
 
 int main (void)
 {
-	const char str[13] = "Iello Wprld\0";
-	const char str2[13] = "Hello World\0";
-	int num = 0;
-//	char *ptr;
+	const char str[13] = "Hello World\0";
+//	const char str2[13] = "Hello World\0";
+//	int num = 0;
+	char *ptr;
 //	char src[8] = "_wor\0ld";
 //	char dst[15];
 //	int s = 9;
@@ -20,8 +20,11 @@ int main (void)
 //	dst[4] = 'o';
 //	dst[5] = '\0';
 	
-	num = ft_strncmp(str, str2, 1);
-	printf ("%d\n", num);
+	ptr = ft_memchr((void *)str, 'W', 6);
+	if (ptr)
+		printf ("%s\n", ptr);
+	else
+		printf ("null pointer");
 //	while (dst[i])
 //		write(1, &dst[i++], 1);
 //	printf ("\n%d\n", ret);
