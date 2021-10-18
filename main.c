@@ -1,15 +1,15 @@
 #include<stdio.h>
-#include<bsd/string.h>
+#include<string.h>
 #include<unistd.h>
 #include<stdlib.h>
 #include"libft.h"
 
 int main (void)
 {
-	const char str[30] = "  \n 2147483649\0";
-//	const char str2[12] = "three\0";
-	int num = 999999;
-//	char *ptr;
+	const char str[30] = "one_two\0";
+	const char str2[12] = "two";
+//	int num = 999999;
+	char *ptr;
 //	char src[8] = "_wor\0ld";
 //	char dst[15];
 //	int s = 9;
@@ -21,9 +21,9 @@ int main (void)
 //	dst[4] = 'o';
 //	dst[5] = '\0';
 	
-	num = ft_atoi(str);
-	if (num)
-		printf ("%d\n", num);
+	ptr = strnstr(str, str2, 0);
+	if (ptr)
+		printf ("%s\n", ptr);
 	else
 		printf ("null pointer");
 //	while (dst[i])
