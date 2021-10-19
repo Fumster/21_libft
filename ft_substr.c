@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 18:59:42 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/19 19:00:00 by fchrysta         ###   ########.fr       */
+/*   Created: 2021/10/19 19:34:53 by fchrysta          #+#    #+#             */
+/*   Updated: 2021/10/19 20:49:26 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include"libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c > 96 && c < 123)
-		c -= 32;
-	return (c);
+	char	*substr;
+
+	if (!s)
+	{
+		substr = (char *)malloc(1);
+		if (substr)
+			*substr = 0;
+		return (substr);
+	}
+	while (start > 0 && *s)
+	{
+		s++;
+		start--;
+	}
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
+	substr = (char *)malloc(len + 1);
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, s, len + 1);
+	return (substr);
 }

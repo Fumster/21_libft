@@ -6,8 +6,8 @@
 
 int main (void)
 {
-	const char str[30] = "one_two\0";
-	const char str2[12] = "two";
+	const char str[30] = ".,-=one_two.,-=\0";
+	const char str2[12] = ",.=-\0";
 //	int num = 999999;
 	char *ptr;
 //	char src[8] = "_wor\0ld";
@@ -21,7 +21,7 @@ int main (void)
 //	dst[4] = 'o';
 //	dst[5] = '\0';
 	
-	ptr = strnstr(str, str2, 0);
+	ptr = ft_strtrim(str, str2);
 	if (ptr)
 		printf ("%s\n", ptr);
 	else
