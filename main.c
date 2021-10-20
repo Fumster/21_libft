@@ -6,10 +6,11 @@
 
 int main (void)
 {
-	const char str[30] = ".,-=one_two.,-=\0";
-	const char str2[12] = ",.=-\0";
+	const char str[50];
+	char c;
+	c = ' ';
 //	int num = 999999;
-	char *ptr;
+	char **ptr;
 //	char src[8] = "_wor\0ld";
 //	char dst[15];
 //	int s = 9;
@@ -21,11 +22,17 @@ int main (void)
 //	dst[4] = 'o';
 //	dst[5] = '\0';
 	
-	ptr = ft_strtrim(str, str2);
-	if (ptr)
-		printf ("%s\n", ptr);
-	else
-		printf ("null pointer");
+	ptr = ft_split(str, c);
+//	if (ptr)
+//	write(1, ptr[0], 6);	
+	printf ("%s\n", ptr[0]);
+//		printf ("%s\n", ptr[1]);
+//		printf ("%s\n", ptr[2]);
+//		printf ("%s\n",:w
+//		 ptr[3]);
+//		printf ("%s\n", ptr[4]);
+//	else
+//		printf ("null pointer");
 //	while (dst[i])
 //		write(1, &dst[i++], 1);
 //	printf ("\n%d\n", ret);
