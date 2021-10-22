@@ -6,13 +6,13 @@
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 22:26:46 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/20 20:17:11 by fchrysta         ###   ########.fr       */
+/*   Updated: 2021/10/22 21:17:52 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t static	ft_find_pos(char const *str, char const *set, size_t pos)
+static size_t	ft_find_pos(char const *str, char const *set, size_t pos)
 {
 	size_t	i;
 	size_t	j;

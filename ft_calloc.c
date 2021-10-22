@@ -6,7 +6,7 @@
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 22:29:19 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/18 23:33:30 by fchrysta         ###   ########.fr       */
+/*   Updated: 2021/10/22 20:46:26 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_calloc(size_t num, size_t size)
 
 	i = 0;
 	ptr = malloc(size * num);
-	if (ptr == 0)
-		return (0);
+	if (!ptr)
+		return (NULL);
 	while (i < (num * size))
 	{
 		((char *)ptr)[i] = 0;

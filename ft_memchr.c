@@ -6,7 +6,7 @@
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 23:34:07 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/18 23:34:19 by fchrysta         ###   ########.fr       */
+/*   Updated: 2021/10/22 20:50:19 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	*ft_memchr(const void *arr, int c, size_t n)
 		arr++;
 		n--;
 	}
-	return (0);
+	return (NULL);
 }

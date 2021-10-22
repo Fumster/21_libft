@@ -6,7 +6,7 @@
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 23:06:09 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/18 23:44:27 by fchrysta         ###   ########.fr       */
+/*   Updated: 2021/10/22 21:05:59 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *src)
 	len = ft_strlen(src) + 1;
 	out = (char *)malloc(len);
 	if (out == 0)
-		return (0);
+		return (NULL);
 	ft_strlcpy(out, src, len);
 	return (out);
 }

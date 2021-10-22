@@ -6,13 +6,13 @@
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 20:36:07 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/20 23:48:22 by fchrysta         ###   ########.fr       */
+/*   Updated: 2021/10/22 21:04:34 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t static	ft_wordcount(char const *s, char c)
+static size_t	ft_wordcount(char const *s, char c)
 {
 	size_t	res;
 	size_t	i;
@@ -38,7 +38,7 @@ size_t static	ft_wordcount(char const *s, char c)
 	return (res);
 }
 
-size_t static	ft_next_word(char const *s, char c, size_t *len, size_t pos)
+static size_t	ft_next_word(char const *s, char c, size_t *len, size_t pos)
 {
 	size_t	i;
 
@@ -55,7 +55,7 @@ size_t static	ft_next_word(char const *s, char c, size_t *len, size_t pos)
 	return (pos);
 }
 
-void static	*mem_clean(char **tab)
+static void	*mem_clean(char **tab)
 {
 	size_t	i;
 
