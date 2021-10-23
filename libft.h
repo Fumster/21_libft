@@ -6,7 +6,7 @@
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 19:02:29 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/23 17:06:58 by fchrysta         ###   ########.fr       */
+/*   Updated: 2021/10/23 17:15:21 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-int ft_lstsize(t_list *lst);
-t_list   *ft_lstlast(t_list *lst);
-void    ft_lstadd_back(t_list **lst, t_list *new);
-void    ft_lstdelone(t_list *lst, void (*del) (void*));
-void    ft_lstclear(t_list **lst, void (*del) (void*));
-void    ft_lstiter(t_list *lst, void (*f) (void*));
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del) (void*));
+void	ft_lstclear(t_list **lst, void (*del) (void*));
+void	ft_lstiter(t_list *lst, void (*f) (void*));
 #endif

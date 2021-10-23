@@ -6,7 +6,7 @@
 /*   By: fchrysta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:11:38 by fchrysta          #+#    #+#             */
-/*   Updated: 2021/10/23 12:21:02 by fchrysta         ###   ########.fr       */
+/*   Updated: 2021/10/23 17:17:36 by fchrysta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst)
 	{
 		lst = lst->next;
-		i++;	
+		i++;
 	}
 	return (i);
 }
